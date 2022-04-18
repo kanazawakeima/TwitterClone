@@ -1,11 +1,11 @@
 <h3>以下の内容で、送信する。</h3>
 
-<%= form_with(model: @post, url: posts_path, local: true) do |form| %>
+<%= form_with(model: @post, local: true) do |form| %>
   <%= form.hidden_field :つぶやき投稿 %>
 
   <p>ツイート内容:<%= @post.つぶやき投稿 %></p>
   <%= form.submit  "ツイート" %>
 
-<%= link_to '戻る', name: 'back' %>
+<%= form.submit '戻る', name: 'back' %>
 
 <% end %>
